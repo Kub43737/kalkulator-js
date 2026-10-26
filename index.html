@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Kalkulator binarny</title>
+</head>
+<body>
+  <input id="a" type="number" value="12">
+  <select id="d"><option>+<option>-<option>*<option>/</select>
+  <input id="b" type="number" value="5">
+  <button onclick="licz()">=</button>
+  <pre id="w"></pre>
+
+  <script>
+    function licz() {
+      const x = +a.value, y = +b.value;
+      const r = eval(x + d.value + y);
+      w.textContent = `${x} ${d.value} ${y} = ${r}\n${x.toString(2)} ${d.value} ${y.toString(2)} = ${r.toString(2)}`;
+    }
+  </script>
+</body>
+</html>
